@@ -1,0 +1,2 @@
+hdfs dfs -mkdir -p /ps/rawData
+hdfs dfs -copyFromLocal ~/Data/Shakespeare.txt /ps/rawData

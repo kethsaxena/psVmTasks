@@ -1,0 +1,96 @@
+#--ssh--update
+sudo apt-get purge openssh-server
+sudo apt-get install openssh-server
+
+#--rsa--
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+
+
+#--SETUP-->
+wget https://apache.cs.utah.edu/hadoop/common/hadoop-3.1.3/hadoop-3.1.3.tar.gz
+tar xzf hadoop-3.1.2.tar.gz
+mv hadoop-3.1.2 hadoop
+
+
+.bashrc
+#JAVA
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_221
+export PATH=$PATH:$JAVA_HOME/bin
+
+#HADOOP
+export HADOOP_HOME=/usr/local/hadoop-3.1.3
+export HADOOP_INSTALL=$HADOOP_HOME
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+
+#HADOOP CONFIG FILES 
+#core-site.xml
+
+<configuration>
+<property>
+     <name>fs.default.name</name>
+     <value>hdfs://localhost:9000</value>
+</property>
+</configuration>
+
+#hdfs-site.xml
+<configuration>
+<property>
+   <name>dfs.replication</name>
+   <value>1</value>
+</property>
+<property>
+    <name>dfs.name.dir</name>
+    <value>file:///usr/local/hadoop-3.1.3/hadoopStore/hdfs/namenode</value>
+</property>
+<property>
+    <name>dfs.data.dir</name>
+    <value>file:///usr/local/hadoop-3.1.3/hadoopStore/hdfs/datanode</value>
+</property>
+</configuration>
+
+#yarn-site.xml
+<configuration>
+ <property>
+  <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce_shuffle</value>
+ </property>
+</configuration>
+
+#mapred-site.xml
+
+<configuration>
+ <property>
+  <name>mapreduce.framework.name</name>
+   <value>yarn</value>
+ </property>
+ <property>
+   <name>yarn.app.mapreduce.am.env</name>
+   <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+ </property>
+ <property>
+   <name>mapreduce.map.env</name>
+   <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+ </property>
+ <property>
+   <name>mapreduce.reduce.env</name>
+   <value>HADOOP_MAPRED_HOME=${HADOOP_HOME}</value>
+ </property>
+</configuration>
+
+#check thru browser
+localhost:9870
+
+
+
+
+
+
+
+
