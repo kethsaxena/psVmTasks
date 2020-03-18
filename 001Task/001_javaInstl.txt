@@ -1,0 +1,31 @@
+#JAVA DOWNLOAD
+wget -O jdk-8u221-linux-x64.tar.gz \
+-c --content-disposition \
+"https://javadl.oracle.com/webapps/download/AutoDL?BundleId=239835_230deb18db3e4014bb8e3e8324f81b43"
+
+#SET JAVA JVM
+sudo mkdir /usr/lib/jvm
+cd /usr/lib/jvm
+sudo tar -xvzf ~/Downloads/jdk-8u231-linux-x64.tar.gz
+
+
+#JAVA VARIABLES
+sudo gedit /etc/environment
+
+J2SDKDIR="/usr/lib/jvm/jdk1.8.0_221"
+J2REDIR="/usr/lib/jvm/jdk1.8.0_221/jre"
+JAVA_HOME="/usr/lib/jvm/jdk1.8.0_221"
+DERBY_HOME="/usr/lib/jvm/jdk1.8.0_221/db"
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_221/bin/java" 0
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.8.0_221/bin/javac" 0
+sudo update-alternatives --set java /usr/lib/jvm/jdk1.8.0_221/bin/java
+sudo update-alternatives --set javac /usr/lib/jvm/jdk1.8.0_221/bin/javac
+
+
+#CHECK JAVA INSTALLATIONS
+update-alternatives --list java
+update-alternatives --list javac
+
+#RESTART
+java -version

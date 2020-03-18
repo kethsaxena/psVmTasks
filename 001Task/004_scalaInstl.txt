@@ -1,0 +1,7 @@
+wget https://downloads.lightbend.com/scala/2.11.8C/scala-2.11.8.tgz
+tar -xvzf scala-2.11.8.tgz
+mv scala-2.11.8.tgz ~/opt/
+
+
+export SCALA_HOME=path 
+export PATH:$PATH:$SCALA_HOME/bin

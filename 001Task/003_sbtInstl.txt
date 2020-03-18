@@ -1,0 +1,7 @@
+wget https://piccolo.link/sbt-1.2.7.tgz
+tar -xvzf sbt-1.2.7.tgz
+
+export SBT_HOME
+export PATH:$PATH:$SBT_HOME/bin
+
+
