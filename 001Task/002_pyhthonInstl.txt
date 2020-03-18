@@ -1,4 +1,12 @@
+#UPDATE EXISTING
 sudo su
 update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 exit
+
+#FRESH DOWNLOAD
+wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tar.xz
+tar -xvzf Python-3.7.2
+
+#install
+python --version
 
