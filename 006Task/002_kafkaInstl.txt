@@ -1,0 +1,4 @@
+wget https://downloads.apache.org/kafka/2.3.1/kafka_2.11-2.3.1.tgz
+tar -xvzf kafka_2.11-2.3.1.tgz
+
+
