@@ -1,0 +1,11 @@
+ 
+ #NET CAT
+ #manual vm to vm
+ nc loclahost -l 6666
+ nc loclahost  6666
+
+ #local to VM
+ ssh kethsaxena@ipAddress nc loclahost  6666
+
+ 
+ 

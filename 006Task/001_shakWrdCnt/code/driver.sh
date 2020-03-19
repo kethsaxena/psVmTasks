@@ -1,0 +1,1 @@
+python swCnt.py ../data/Shakespeare.txt
