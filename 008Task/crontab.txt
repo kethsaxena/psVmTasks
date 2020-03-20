@@ -1,0 +1,1 @@
+03 09-15 * * * /usr/local/bin/scalaWordCount.sh
