@@ -1,6 +1,5 @@
 #UPDATE EXISTING
-sudo su
-update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+sudo update-alternatives --install /usr/bin/python python ~/opt/python3/bin/python3.7 1
 exit
 
 #FRESH DOWNLOAD

@@ -1,0 +1,11 @@
+http://ftp.ntu.edu.tw/MySQL/Downloads/Connector-J/mysql-connector-java-8.0.18.tar.gz
+tar -zxf mysql-connector-java-8.0.18.tar.gz
+
+#move to jar file to 
+$sqoop_home/lib
+
+#list tables 
+sqoop list-tables --connect jdbc:mysql://localhost/bigdata --username root --password rishikesh
+ 
+#import data
+sqoop import --connect jdbc:mysql://localhost/bigdata --username root --P --m 1 --table hdfs_export --target-dir /hdfs_exports

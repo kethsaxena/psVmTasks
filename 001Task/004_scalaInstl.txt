@@ -5,3 +5,6 @@ mv scala-2.11.8.tgz ~/opt/
 
 export SCALA_HOME=path 
 export PATH:$PATH:$SCALA_HOME/bin
+
+
+ ~/opt/Python-3.7.0/configure --prefix=/home/opt/python3 --enable-optimizations

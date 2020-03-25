@@ -1,0 +1,9 @@
+sudo apt install mysql-server
+systemctl status mysql.service
+sudo mysql_secure_installation
+
+
+select USER,Host,plugin,authentication_string from mysql.user;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'rishikesh';
+select USER,Host,plugin,authentication_string from mysql.user;
+UPDATE user SET plugin='mysql_native_password' where user='root';
