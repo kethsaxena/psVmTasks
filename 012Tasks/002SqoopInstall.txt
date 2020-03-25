@@ -9,3 +9,6 @@ sqoop list-tables --connect jdbc:mysql://localhost/bigdata --username root --pas
  
 #import data
 sqoop import --connect jdbc:mysql://localhost/bigdata --username root --P --m 1 --table hdfs_export --target-dir /hdfs_exports
+
+#export data 
+sqoop export --connect jdbc:mysql://localhost/bigdata --username root --P  --table hdfs_import --export-dir /hdfs_exports/part-m-00000
