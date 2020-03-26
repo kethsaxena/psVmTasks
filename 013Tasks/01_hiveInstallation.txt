@@ -1,0 +1,1 @@
+wget http://archive.apache.org/dist/hive/hive-2.3.5/apache-hive-2.3.5-src.tar.gz

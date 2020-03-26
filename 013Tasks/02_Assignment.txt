@@ -1,0 +1,9 @@
+#!/bin/bash  
+
+CREATE DATABASE IF NOT EXISTS bigdata;
+
+CREATE TABLE samData2 (id INT,views INT,ratings INT,votes INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t';
+
+load data local inpath '/media/sf_ubpgDrive/temp/u.data' into table samData2;
+
+select * from samData2 limit2
