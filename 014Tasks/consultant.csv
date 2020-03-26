@@ -1,0 +1,11 @@
+id, name, email, phone, city, department_name
+100, Jack Ripper, jrip@gmail.com, 8171111111, Dallas, DataEng
+101, Jack James, jjames@gmail.com, 8171111222, Dallas, DataEng
+102, Amy Adams, amy@gmail.com, 4041111222, Atlanta, DataSci
+103, Jimmy Hendrix, hendy@gmail.com, 5056661212, Los Angeles, Android
+104, Robert Adams, roberto@gmail.com, 1231111222, Phoenix, DataEng
+105, Shawn Mathew, shawn@gmail.com, 8179123111, Dallas, DataEng
+106, Robert Delgado, rdelgado@gmail.com, 8171110909, Dallas, Apps
+107, Whitney Houston, whit@gmail.com, 4041155566, Atlanta, DataSci
+108, Jimmy Fallon, jfallon@gmail.com, 5056787812, Los Angeles, Android
+109, George Best, georgy@gmail.com, 9122233222, Phoenix, DataEng
