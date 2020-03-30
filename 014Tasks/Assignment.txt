@@ -1,0 +1,28 @@
+/media/sf_ubpgDrive/temp/consultant.csvread
+
+
+
+CREATE TABLE my_table (field1 string, field2 int,
+
+field3 string, field4 double)
+
+ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.JsonSerde' ;
+
+Add the Jar :- ADD JAR /path-to/hive-json-serde.jar;
+
+load the file :- load data inpath 'folder/to/json/data.json' into my_tabl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
